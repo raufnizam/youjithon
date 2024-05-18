@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>YT Challenges | Grading</title>
+{% endblock %}
+
+{% block content %}
+    <style>
+        .rules {
+            width: 90%;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: #232d3b;
+            color: #fff;
+            margin-bottom: 3rem;
+            border-radius: 1rem;
+            font-size: 20px;
+        }
+
+        .title {
+            width: 90%;
+            margin: 0 auto;
+            padding: 2rem ;
+            margin-top: 2rem;
+            font-style: bolder;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .title img {
+            width: 25px;
+            margin-right: 1rem;
+            margin-bottom: -0.25rem;
+        }
+
+        .rule {
+            margin-bottom: 30px;
+        }
+
+        .rule h2 {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .rule p {
+            margin-bottom: 5px;
+            margin-left: 3rem;
+        }
+    </style>
+
+    {% include 'header.html' %}
+    <div class="title">
+        <h1>How do we grade Timathon submissions?</h1>
+    </div>
+    <div class="rules">
+
+        <p><b>How do we grade projects?</b></p>
+        <p>
+            The new process consists of a judging panel of 3-5 judges (most commonly staff who are not participating),
+            where each judge would test and review the projects, grading them on 4 criteria (each worth a maximum of 10 points).
+            These points are then averaged to score the team’s submission out of 40.
+        </p>
+
+        <p><b>What criteria do we grade by?</b></p>
+        <ul>
+            <li><b>Theme:</b>
+                <ul>
+                    <li>Does the project fit the theme?</li>
+                    <li>How unique is it?</li>
+                </ul>
+            </li>
+            <li><b>Functionality:</b>
+                <ul>
+                    <li>How functional is the project?</li>
+                    <li>Is it just an informational site/project?</li>
+                    <li>How interactive is the site/project?</li>
+                </ul>
+            </li>
+            <li><b>Code:</b>
+                <ul>
+                    <li>Code quality (readable, formatted, linted, etc)?</li>
+                    <li>Is the code unique? (using templates, code directly copied from examples and other pre-written code may reduce your points for this criterion)</li>
+                </ul>
+            </li>
+            <li><b>Intuitiveness:</b>
+                <ul>
+                    <li>How easy is the project to use?</li>
+                    <li>How easy is the project to set up? (make a good README!)</li>
+                    <li>How intuitive and easy to use is the UI?</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p><b>How to get the highest grade:</b></p>
+        <ul>
+            <li>Remember, only the top 15 submissions (in order of points) will be passed to our special judges, who will then choose the top 5 submissions, which will then be reviewed in Tim’s video!</li>
+            <li>So how do you achieve as many points as possible? Well, using the judging criteria stated above would be a great guide. The ability to meet all 4 criteria, at its highest standards, could guarantee you top points.</li>
+            <li>We also highly focus on how much of the code is yours. Whilst it is common to use templates and directly copy examples provided by documentation and other sources, we want you to try and build as much of it on your own as possible. We do not just want a graphical interface for an existing API or module. The judges want to see your creativity and uniqueness in the functionalities you bring through your project.</li>
+        </ul>
+
+        <img src="../static/emoji/giphy.gif" alt="">
+
+    </div>
+{% endblock %}

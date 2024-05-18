@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% include 'header.html' %}
+
+    <main>
+        <section id="sec_one">
+            <div class="left">
+                <h1 class="pacifico-regular">YOUJITHON Code Jams</h1>
+                <p>Youjithon is a code jam hosted every few months, each consisting of a different theme and allowing yourself to put your skills to the test.</p>
+                <p><strong>Prizes:</strong> For our code jams, you're in for a chance to win real cash prizes. <br>(PKR) 5000, 3000 and 1000 will be split amongst the winning teams</p>
+                <button><a href="{% url 'hackathon' %}">View Youjithon</a></button>
+                <button><a href="{% url 'hackathon_history' %}">Youjithon History</a> </button>
+            </div>
+            <div class="right">
+                <img src="{% static 'pngwing.com.png' %}" alt="">
+            </div>
+        </section>
+
+        <section id="sec_two">
+            <div class="upcoming">
+                <h1 class="pacifico-regular">Upcoming Youjithon</h1>
+                <div class="container_two">
+                    {% if hackathons %}
+                    {% for hackathon in hackathons %}
+                        {% if hackathon.start_date > today %}
+                            <div class="content_of_two">
+                                <ul>
+                                    <li>
+                                        <h1>{{ hackathon.name }}</h1>
+                                        <p>Schedule: {{ hackathon.start_date }} - {{ hackathon.end_date }}</p>
+                                        <p>{{ hackathon.description}}</p>
+                                        {% if user.is_superuser %}
+                                            <div class="links">
+                                                <a href="{% url 'hackathon_edit' hackathon.id %}">Edit</a>
+                                                <a href="{% url 'hackathon_remove' hackathon.id %}">Remove</a>
+                                            </div>
+                                        {% endif %}
+                                    </li>
+                                </ul>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    {% else %}
+                    <div class="content_of_two">
+                        <p>Nothing to Show here</p>
+                        {% if user.is_superuser %}
+                        <div class="links">
+                            <a href="{% url 'hackathon_add' %}">Add</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="running">
+                <h1 class="pacifico-regular">Running Youjithon</h1>
+                <div class="container_two">
+                    {% if hackathons %}
+                    {% for hackathon in hackathons %}
+                        {% if hackathon.start_date <= today and hackathon.end_date >= today %}
+                            <div class="content_of_two">
+                                <ul>
+                                    <li>
+                                        <h1>{{ hackathon.name }}</h1>
+                                        <p>Schedule: {{ hackathon.start_date }} - {{ hackathon.end_date }}</p>
+                                        {% if user.is_superuser %}
+                                            <div class="links">
+                                                <a href="{% url 'hackathon_edit' hackathon.id %}">Edit</a>
+                                                <a href="{% url 'hackathon_remove' hackathon.id %}">Remove</a>
+                                            </div>
+                                        {% endif %}
+                                    </li>
+                                </ul>
+                            </div>
+                        {% else %}
+                        <div class="content_of_two">
+                            <p>Nothing to show here.</p>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                    {% else %}
+                    <div class="content_of_two">
+                        <p>Nothing to Show here</p>
+                        {% if user.is_superuser %}
+                        <div class="links">
+                            <a href="{% url 'hackathon_add' %}">Add</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

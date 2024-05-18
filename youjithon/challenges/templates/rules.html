@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>YT Challenges | Discord Rules</title>
+{% endblock %}
+
+{% block content %}
+
+    <style>
+
+        .rules{
+            width: 90%;
+            margin: 0 auto;
+            padding: 1rem ;
+            background-color: #232d3b;
+            color: #fff;
+            margin-bottom: 3rem;
+            border-radius: 1rem;
+
+        }
+        .title{
+            width: 90%;
+            margin: 0 auto;
+            padding: 2rem ;
+            margin-top: 2rem;
+            font-style: bolder;
+            color: #fff;
+            font-size: 16px;
+
+        }
+
+        .title img{
+            width: 25px;
+            margin-right: 1rem;
+            margin-bottom: -.25rem;
+        }
+        .rule {
+            margin-bottom: 30px;
+        }
+
+        .rule h2 {
+            margin-bottom: 10px;
+        }
+
+        .rule p {
+            margin-bottom: 5px;
+            margin-left: 3rem;
+        }
+    </style>
+
+    {% include 'header.html' %}
+
+    <div class="title">
+        <h2>Discord Rules <img src="../static/emoji/pushpin.png" alt=""></h2>
+    </div>
+
+    <div class="rules">
+        <div class="rule">
+            <h2>1. No Racism/Hate Speech</h2>
+            <p>• Racism, sexism, etc. will not be tolerated in this server.</p>
+            <p>• Also keep custom statuses clean. If the status breaks TOS we will kick you.</p>
+        </div>
+
+        <div class="rule">
+            <h2>2. Do not send Malicious Content</h2>
+            <p>• Sending/Linking any harmful material such as viruses, IP grabbers, etc. will result in an immediate and permanent ban.</p>
+            <p>• Any discussions regarding development of malicious software will also result in immediate punishment with no warning.</p>
+            <p>• We ask that you do not upload python files when sharing your code. Stick to web-services such as <a href="https://hastebin.com/">Hastebin</a>, Mystbin or python-discords: <a href="https://paste.pythondiscord.com/">paste.pythondiscord.com</a>.</p>
+        </div>
+
+        <div class="rule">
+            <h2>3. No NSFW in any of the chats</h2>
+            <p>• Please keep anything NSFW out of this server.</p>
+        </div>
+
+        <div class="rule">
+            <h2>4. No spreading/leaking Personal Information</h2>
+            <p>• Please do not threaten or attempt to dox any members of this server.</p>
+            <p>• It is against Discord TOS and will result in a permanent ban from this server.</p>
+        </div>
+
+        <div class="rule">
+            <h2>5. No Advertising</h2>
+            <p>• This goes for Twitch, Discord, YouTube, etc.</p>
+            <p>• If your main purpose is to come to this server and Advertise you will be banned.</p>
+        </div>
+
+        <div class="rule">
+            <h2>6. No Punishment Evasion</h2>
+            <p>• Do not attempt to evade any punishment you receive.</p>
+            <p>• If you are caught doing it, it will result in a kick/ban.</p>
+        </div>
+
+        <div class="rule">
+            <h2>7. Refrain from any conversations discussing politics, etc.</h2>
+            <p>• This is a coding discord, not a politics discord.</p>
+            <p>• If you & another member want to speak about topics related to politics, you can talk about it in #random-chat or DM’s.</p>
+        </div>
+
+        <div class="rule">
+            <h2>8. Please speak English in this server.</h2>
+        </div>
+
+        <div class="rule">
+            <h2>9. Please respect Discord’s Terms of Service</h2>
+            <p>• Anything that breaks these terms will not be tolerated and will result in a ban.</p>
+            <p>• <a href="https://discord.com/terms">Discord Terms of Service</a></p>
+            <p>• <a href="https://discord.com/guidelines">Discord Guidelines</a></p>
+        </div>
+
+        <div class="rule">
+            <h2>10. Also, please do not ping Tim.</h2>
+        </div>
+
+        <p>These are the server rules and they will be enforced.</p>
+    </div>
+    
+{% endblock %}

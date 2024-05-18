@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Remove Hackathon</h1>
+<p>Are you sure you want to delete "{{ hackathon.name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+    <a href="{% url 'hackathon' %}">Cancel</a>
+</form>
+
+{% endblock %}

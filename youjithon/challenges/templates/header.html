@@ -1,0 +1,35 @@
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'header.css' %}">
+{% endblock %}
+{% block content %}
+    <header>
+        <div class="content">
+
+        <div class="logo">
+            <p><a href="{% url 'index' %}"><img src="../static/emoji/pngwing.com(1).png" alt=""></a></p>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'hackathon' %}">Youjithon</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <span></span>
+                        <a href="{% url 'rules' %}">Discord Rules</a>
+                        <a href="{% url 'faq' %}">FAQ</a>
+                        <a href="{% url 'grading' %}">Grading</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="profile">
+            <button><p>default Image</p></button>
+        </div>
+
+    </div>
+
+    </header>
+{% endblock %}

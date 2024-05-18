@@ -1,0 +1,36 @@
+{% extends '../base.html' %}
+
+{% block content %}
+    {% include 'header.html' %}
+
+    {% if user.is_superuser %}
+    <h1>Hackathons</h1>
+
+    <ul>
+        <li><a href="{% url 'hackathon_add' %}">Add Hackathon</a></li>
+    </ul>
+
+    <ul>
+        {% for hackathon in hackathons %}
+            <li>
+                <h1>{{ hackathon.name }}</h1>
+                <p>Start Date: {{ hackathon.start_date }}</p>
+                <p>End Date: {{ hackathon.end_date }}</p>
+                <a href="{% url 'hackathon_edit' hackathon.id %}">Edit</a>
+                <a href="{% url 'hackathon_remove' hackathon.id %}">Remove</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% else %}
+
+        <h1>Hackathons</h1>
+        {% for hackathon in hackathons %}
+            <h1>{{ hackathon.name }}</h1>
+            <p>Start Date: {{ hackathon.start_date }}</p>
+            <p>End Date: {{ hackathon.end_date }}</p>
+        {% endfor %}
+    
+    {% endif %}
+
+{% endblock %}

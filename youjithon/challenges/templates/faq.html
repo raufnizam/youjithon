@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+<title>YT Challenges | FAQ</title>
+{% endblock %}
+
+{% block content %}
+
+<title>Discord Rules</title>
+<style>
+
+    .rules{
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem ;
+        background-color: #232d3b;
+        color: #fff;
+        margin-bottom: 3rem;
+        border-radius: 1rem;
+    }
+
+    .title{
+        width: 90%;
+        margin: 0 auto;
+        padding: 2rem ;
+        margin-top: 2rem;
+        font-style: bolder;
+        color: #fff;
+    }
+
+    .title img{
+        width: 25px;
+        margin-right: 1rem;
+        margin-bottom: -.25rem;
+        font-size: 14px;
+
+    }
+
+    .rule {
+        margin-bottom: 30px;
+        margin-top: 1rem;
+    }
+
+    .rule h2 {
+        margin-bottom: 10px;
+        font-weight: bold; /* Making the question bold */
+        font-size: 26px;
+    }
+    .rule h2 img{
+
+        width: 25px;
+                margin-right: 1rem;
+                margin-bottom: -.25rem;
+    }
+
+    .rule p {
+        margin-bottom: 3rem;
+        /* margin-left: 3rem; */
+        font-size: 20px;
+    }
+    br{
+        margin-bottom: 1rem;
+    }
+</style>
+
+
+{% include 'header.html' %}
+
+<div class="title">
+    <h2 >Youjithon FAQ <img src="../static/emoji/pushpin.png" alt=""></h2>
+</div>
+
+<div class="rules">
+
+    <div class="rule">
+        <h2>Website <img src="../static/emoji/computer.png" alt=""></h2>
+        <p><b>Q: Why can’t I log in to the website?</b><br>A: For logging in to be successful, you must have an email linked on your discord account. We have implemented this to avoid spam accounts.</p>
+        <p><b>Q: Why isn’t the website letting me access the Timathon page?</b><br>A: To view the Timathon page, make sure you have logged in via Discord on the website. To log in, head over to the home page, and press the Log in button (or click here to directly log in).</p>
+        <p><b>Q: Where can I vote?</b><br>A: You cannot vote for submissions anymore as we have replaced community voting with a judging panel. Click here to read more about how submissions are graded now.</p>
+        <p><b>Q: How do we submit?</b><br>A: When submissions open (on the 3rd week), a submit button will appear on your team page, which you can use to submit your project. The project must be located on GitHub, thus you must provide the GitHub link to your team’s repository in the Project Link field (located on the submit page). A reminder message will also be sent in #info once submissions open (so make sure you stay up to date with the channel).</p>
+        <p><b>Q: I’ve logged in, but I still can’t access the Timathon page.</b><br>A: Please contact the TWT Discord staff via ModMail (in the server).</p>
+        <p><b>Q: How can I invite a member to my team?</b><br>A: Go to your team’s dashboard, where you’ll see a Copy Invite button.</p>
+        <p><b>Q: Why doesn’t the invite link work?</b><br>A: Make sure you have logged into the website first, and that the team still exists.</p>
+        <p><b>Q: Where can I submit my Timathon project?</b><br>A: Once submissions open, a Submit button will appear on your team’s dashboard.</p>
+    </div>
+</div>
+<div class="rules">
+    <div class="rule">
+        <h2>Code <img src="../static/emoji/open_file_folder.png" alt=""></h2>
+        <p><b>Q: Are we allowed to use external/builtin libraries/modules or APIs?</b><br>A: Yes, you are allowed to use any libraries and APIs as long as the setup does not require credentials to use your program/application. However, excessive and unnecessary use of APIs and libraries could result in lower marks from the judges! Read more about this here.</p>
+        <p><b>Q: What is pre-existing code? Does that include libraries and/or APIs?</b><br>A: By pre-existing code, we mean code you have previously written or code from other sources; this does not include libraries and APIs (which are allowed). We recommend that you do not directly copy templates or example code, as this can result in reduced points from the judges.</p>
+        <p><b>Q: What language(s) can I use?</b><br>A: Any! But make sure your project is easy to set up and run by the judges.</p>
+        <p><b>Q: What if I find a bug or want to edit the README file after I submitted, can I do that?</b><br>A: You can make changes to your repo as long as it’s before the submission period ends.</p>
+        <p><b>Q: Should I add a README to my repo?</b><br>A: In addition to code, we expect your whole project to be well presented. This includes having a detailed and good looking README file that will make it easier for the judges to set up your project.</p>
+    </div>
+
+
+</div>
+<div class="rules">
+    <div class="rule">
+        <h2>Other <img src="../static/emoji/pushpin.png" alt=""></h2>
+        <p ><b>Q: Can I create my own team?</b><br>A: Yes, of-course!</p>
+        
+        <p ><b>Q: When is the deadline?</b><br>A: The deadline is 14 days from the day the Theme is released. There will be a timeline in the discord server.</p>
+        
+        <p ><b>Q: When will winners be announced?</b><br>A: After the 2 weeks judging period.</p>
+        
+        <p ><b>Q: When do submissions open up?</b><br>A: Day 9-14 of the code jam. There will be a timeline in the discord server.</p>
+        
+        <p ><b>Q: When is the deadline for creating my team?</b><br> A: On the 5th day after the code jam starts.</p>
+        
+        <p ><b>Q: Can I join multiple teams?</b><br>A: No, you may only be in 1 team (of up to 6 people).</p>
+        
+        <p ><b>Q: Can I invite someone to my team after the team creation period has finished?</b><br>A: No, you cannot add more members to your team after the team creation period (week 1).</p>
+        
+        <p ><b>Q: How many winners are there?</b><br>A: Tim will review the top 5 projects and choose 3 winners. If there are multiple teams drawn 5th place, Tim will choose his favourite out of the drawn submission to review.</p>
+        
+        <p ><b>Q: I was in the top 5, but not showcased in the video.</b><br>A: If your project requires intensive and time consuming setup, then it will not be reviewed. Tim will not be downloading entire SDK’s or setting up virtual machines and/or emulators to run your projects. If your project is a website, we recommend you host it so that it can easily be tested and reviewed by other users and Tim.</p>
+        
+        <p ><b>Q: I found someone cheating. What should I do?</b><br> A: Please report the issue directly to ModMail.</p>
+        
+        <p><b>Q: My teammate is not contributing. What should I do?</b><br>A: Please report the issue directly to ModMail. Users who do not contribute at all will be removed from the team.</p>
+    </div>
+</div>
+
+    
+{% endblock %}

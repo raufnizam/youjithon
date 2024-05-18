@@ -1,0 +1,103 @@
+/* header.css */
+
+header{
+    width: 100%;
+    background-color: #232d3b;
+}
+
+header .content {
+    /* color: white; */
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem;
+}
+
+
+.logo {
+    text-align: center;
+}
+
+.logo p {
+    margin: 0;
+}
+
+.logo a {
+    display: inline-block;
+}
+
+.logo img {
+    width: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.links li {
+    margin-right: 10px; 
+}
+
+.links li a {
+    color: rgb(186, 186, 186);
+    text-decoration: none;
+    padding: 14px 5px;
+    border-radius: .5rem;   
+}
+
+.links li a:hover {
+    color:  rgb(255,255,255);
+    transition: .7s;
+    
+}
+
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #384757;
+    min-width: 160px;
+    margin-top: 0.7rem;
+    z-index: 1;
+
+}
+
+.dropdown-content a {
+    display: block;
+    color: #6c757d;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    color:  rgba(255,255,255,.75);
+    transition: .7s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.profile button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px; /* Adjust as needed */
+    border-radius: 50%;
+}
